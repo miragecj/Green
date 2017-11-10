@@ -1,3 +1,4 @@
+var selectedMapping = null;
 $( document ).ready(function() {
     $(".bin").click(OnBinClick);
  var mappings = 
@@ -15,11 +16,10 @@ $( document ).ready(function() {
             "ContainerId":"#garbage1"
         }
      ];
-    var selectedMapping = mappings[0];
+     selectedMapping = mappings[0];
      $("#trash").addClass(selectedMapping.ObjectId)
   
     MoveCloud();
-    ThrowAway($("#trash"), $(selectedMapping.ContainerId));
     
 });
 
@@ -40,5 +40,13 @@ function MoveCloud(){
 }
 
 var OnBinClick = function(){
-alert(this.id);
+    ThrowAway($("#trash"), $("#" + this.id));
+    var self = this;
+    window.setTimeout(function(){
+        if ( "#" + self.id == selectedMapping.ContainerId){
+            alert("Ok");
+        } else{
+            alert("not ok")
+        }
+    }, 12000);
 }
