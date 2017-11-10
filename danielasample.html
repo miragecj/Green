@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src=".\GreenSockFiles\splittext.js"></script>
 
     <style media="screen" type="text/css">
         #demo-text {
@@ -24,12 +25,48 @@
             display: inline-block;
             -webkit-font-smoothing: antialiased;
         }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            border-radius: 6px;
+            margin-top: 4px;
+            display: inline-block;
+            color: aquamarine;
+            text-align: center;
+        }
+
+        .green {
+            background-color: #6fb936;
+            width: 120px;
+          
+        }
+
+        .orange {
+            background-color: #f38630;
+            width: 110px;
+            
+        }
+
+        .grey {
+            background-color: #989898;
+            width: 110px;
+           
+        }
     </style>
 
 </head>
 
 <body>
     <div>
+        <div>
+            <img src=".\image\norisor.png" class="box"/>
+            <img src=".\image\norisor.png" class="box"/>
+            <img src=".\image\norisor.png" class="box"/>
+            <img src=".\image\norisor.png" class="box"/>
+        </div>
+
         <div id="demo-text" style="color: green ">Go Green with GSAP !!!! </div>
         <img id="hero" src="Apple_tree_4585.png" width="350" height="350" style="left: 50px; top:50px" />
         </br>
@@ -44,11 +81,24 @@
         //TweenMax.to(photo2, 6, { width: "400px", height: "450px" });
         //TweenMax.to(photo, 5, {css:{left:"400px", top:"20px"}})
         var title = document.getElementById("demo-text");
-        
-        var message = $("#demo-text");
-        TweenMax.to(title, 3, {rotationX:45, scaleX:0.8, z:-300});
 
-       // TweenMax.staggerFromTo(title, 0.2, { autoAlpha: 0 }, { autoAlpha: 1 }, 0.1);
+
+        TweenMax.to("#demo-text", 3, { rotationX: 45, scaleX: 0.8, z: -300, });
+        TweenMax.to(title, 3, { innerText: "TTTTTadssd" });
+
+        //TweenMax.staggerTo(".box", 1, { rotation: 360, y: 100 }, 0.5);
+//var count =0;
+        TweenMax.to(".box", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: onRepeat, repeatDelay: 0.5, ease: Linear.easeNone });
+        //TweenLite.set(box, { backgroundColor: "hsl(" + Math.random() * 255 + ", 90%, 60%)" });
+
+
+        function onRepeat() {
+            //count++;
+            //box.innerHTML = count;
+            //TweenLite.set(box, { backgroundColor: "hsl(" + Math.random() * 255 + ", 90%, 60%)" });
+        }
+
+        TweenMax.staggerFromTo(title, 0.2, { autoAlpha: 0 }, { autoAlpha: 1 }, 0.1);
 
     </script>
 

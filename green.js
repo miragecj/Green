@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    MoveCloud();
     ThrowAway($("#trash"), $("#garbage2"));
     
 });
@@ -13,4 +14,8 @@ var ThrowAway = function(pieceOfTrash, garbageBin){
     TweenMax.to("#man", 10, {left:ComputeThrowPosition(garbageBin)});
     //throw trash into bin
     TweenMax.to(pieceOfTrash, 3, {x:80, y:80, delay:10, opacity:0});
+}
+
+function MoveCloud(){
+    TweenMax.to(".norisor", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: function() { }, repeatDelay: 0.5, ease: Linear.easeNone });
 }

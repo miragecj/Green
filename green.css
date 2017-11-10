@@ -54,3 +54,13 @@ body, html {
     top:70px; 
     left:30px;
 }
+
+.norisor {
+    width: 250px;
+    height: 100px;  
+    position: relative;
+    border-radius: 6px;
+    margin-top: 4px;
+    display: inline-block;
+}
+
