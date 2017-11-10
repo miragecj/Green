@@ -1,0 +1,64 @@
+div.myFirstSquare
+{
+    width:20px; 
+    height:20px; 
+    background-color:darkgreen; 
+    display:none;
+    margin:20px;
+}
+
+div.circle
+{
+
+}
+
+div.treeHolder
+{
+    
+}
+
+img.myTree
+{
+    position: absolute;
+    height: 150px;
+    left:200px;
+    display: none;
+
+}
+
+div.trashBinHolder
+{
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    height: 100px;
+    width: 55px;
+    background-color: green;
+    padding: 20px 20px 60px 20x;
+}
+
+div.moveToGarbage
+{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+div.personHolder
+{
+    height: 200px;
+    width: 25px;
+    background-color: blue;
+}
+
+div.trash
+{
+    position: absolute;
+    left: 25px;
+    top: 50px;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 26px;
+
+}
