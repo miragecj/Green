@@ -1,18 +1,57 @@
 <html>
-<title>
-</title>
+
+<head>
+    <title> Demo </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <style media="screen" type="text/css">
+        #demo-text {
+            width: 900px;
+            margin: 100px auto;
+            overflow: visible;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #demo-text span {
+            position: relative;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+
+</head>
 
 <body>
+    <div>
+        <div id="demo-text" style="color: green ">Go Green with GSAP !!!! </div>
+        <img id="hero" src="Apple_tree_4585.png" width="350" height="350" style="left: 50px; top:50px" />
+        </br>
+        <img id="hero2" src="Apple_tree_4585.png" width="650" height="650" style="left: 50px; top:50px" />
+    </div>
+
     <script type="text/javascript">
-        alert("hello world, agaaaain!");
-        alert("aaaa1 23 45");
+        var photo = document.getElementById("hero");
+        var photo2 = document.getElementById("hero2");
+
+        //TweenMax.to(photo, 4, { width: "100px", height: "250px" });
+        //TweenMax.to(photo2, 6, { width: "400px", height: "450px" });
+        //TweenMax.to(photo, 5, {css:{left:"400px", top:"20px"}})
+        var title = document.getElementById("demo-text");
+        
+        var message = $("#demo-text");
+        TweenMax.to(title, 3, {rotationX:45, scaleX:0.8, z:-300});
+
+       // TweenMax.staggerFromTo(title, 0.2, { autoAlpha: 0 }, { autoAlpha: 1 }, 0.1);
+
     </script>
 
-    <div class="bcg">
-        <div class="hero">
-            <h1>Green
-                <span>Sock</span> Tilt Effect</h1>
-        </div>
 </body>
 
 </html>

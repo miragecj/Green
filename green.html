@@ -18,7 +18,7 @@
     #garbage{
         position: fixed;
         bottom: 30px;
-        left:1400px;
+        right:100px;
         width:100px; /*width of your image*/
         height:100px; /*height of your image*/
         background-image:url("image/garbage.svg");
@@ -58,7 +58,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script type="text/javascript">
         $( document ).ready(function() {
-             TweenMax.to("#man", 10, {left:1200});
+            var trash = $("#garbage");
+            var trashPosition  = $("#garbage").position().left - $("#man").width();
+             TweenMax.to("#man", 10, {left:trashPosition});
              TweenMax.to("#trash", 3, {x:80, y:80, delay:10, opacity:0});
         });
 
