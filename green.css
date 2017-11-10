@@ -45,8 +45,6 @@ body, html {
     left:160px;
     width: 64px;
     height: 64px;
-    background-image:url("image/pet_bottle.svg");
-    
 }
 
 .labelContainer{
@@ -84,4 +82,16 @@ div.plastic div span
 div.glass div span
 {
     color:green;
+}
+
+.paperTrash{
+    background-image:url("image/toilet.svg");
+}
+
+.plasticTrash{
+    background-image: url("image/PlasticBottle.svg")
+}
+
+.glassTrash{
+    background-image: url("image/pet_bottle.svg")
 }

@@ -1,7 +1,25 @@
 $( document ).ready(function() {
     $(".bin").click(OnBinClick);
+ var mappings = 
+     [
+         {
+            "ObjectId": "glassTrash",
+            "ContainerId":"#garbage2"
+         },
+        {
+            "ObjectId": "plasticTrash",
+            "ContainerId":"#garbage3"
+         },
+        {
+            "ObjectId": "paperTrash",
+            "ContainerId":"#garbage1"
+        }
+     ];
+    var selectedMapping = mappings[0];
+     $("#trash").addClass(selectedMapping.ObjectId)
+  
     MoveCloud();
-    ThrowAway($("#trash"), $("#garbage2"));
+    ThrowAway($("#trash"), $(selectedMapping.ContainerId));
     
 });
 
