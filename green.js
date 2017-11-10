@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+    $(".bin").click(OnBinClick);
     MoveCloud();
     ThrowAway($("#trash"), $("#garbage2"));
     
@@ -18,4 +19,8 @@ var ThrowAway = function(pieceOfTrash, garbageBin){
 
 function MoveCloud(){
     TweenMax.to(".norisor", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: function() { }, repeatDelay: 0.5, ease: Linear.easeNone });
+}
+
+var OnBinClick = function(){
+alert(this.id);
 }
