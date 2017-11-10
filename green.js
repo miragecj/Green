@@ -19,24 +19,25 @@ $( document ).ready(function() {
      selectedMapping = mappings[0];
      $("#trash").addClass(selectedMapping.ObjectId)
   
-    MoveCloud();
+    MoveClouds();
     
 });
 
 
-var ComputeThrowPosition = function(garbageBin){
+var ComputeThrowPosition = function (garbageBin) {
     return garbageBin.position().left - $("#man").width();
 }
 
-var ThrowAway = function(pieceOfTrash, garbageBin){
+var ThrowAway = function (pieceOfTrash, garbageBin) {
     //move man with trash next to the bin
-    TweenMax.to("#man", 10, {left:ComputeThrowPosition(garbageBin)});
+    TweenMax.to("#man", 10, { left: ComputeThrowPosition(garbageBin) });
     //throw trash into bin
-    TweenMax.to(pieceOfTrash, 3, {x:80, y:80, delay:10, opacity:0});
+    TweenMax.to(pieceOfTrash, 3, { x: 80, y: 80, delay: 10, opacity: 0 });
 }
 
-function MoveCloud(){
-    TweenMax.to(".norisor", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: function() { }, repeatDelay: 0.5, ease: Linear.easeNone });
+function MoveClouds() {
+        var distance = $("#garbage2").position().left;
+        TweenMax.to(".cloud", 30, { left: distance, repeat: 10, yoyo: true, onRepeat: function () { }, repeatDelay: 0.5, ease: Linear.easeNone });
 }
 
 var OnBinClick = function(){
