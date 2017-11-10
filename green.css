@@ -64,3 +64,24 @@ body, html {
     display: inline-block;
 }
 
+div.bin div span
+{
+    font-size: smaller; 
+    font-weight: bold;
+}
+
+div.paper div span
+{
+    color:blue;
+}
+
+div.plastic div span
+{
+    color:yellow;
+}
+
+
+div.glass div span
+{
+    color:green;
+}
