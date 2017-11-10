@@ -1,0 +1,31 @@
+body, html {
+    background-image:url("image/park.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#man {
+      position: fixed;
+        bottom: 100px;
+
+    width: 200px;
+    height: 150px;
+}
+
+#garbage{
+    position: fixed;
+    bottom: 30px;
+    right:100px;
+    width:100px; /*width of your image*/
+    height:100px; /*height of your image*/
+    background-image:url("image/garbage.svg");
+}
+
+#trash{
+    position:absolute;
+    top:60px;
+    left:160px;
+    width: 64px;
+    height: 64px;
+    background-image:url("image/pet_bottle.svg");
+    
+}
