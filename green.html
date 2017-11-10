@@ -8,14 +8,16 @@
         background-repeat: no-repeat;
     }
     #man {
-    position: relative;
+          position: fixed;
+            bottom: 100px;
     
-    width: 200px;
-    height: 150px;
+        width: 200px;
+        height: 150px;
     }
 
     #garbage{
-        position: relative;
+        position: fixed;
+        bottom: 30px;
         left:1400px;
         width:100px; /*width of your image*/
         height:100px; /*height of your image*/
@@ -56,14 +58,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
     <script type="text/javascript">
         $( document ).ready(function() {
-            var positionMan = ($( document ).height() *65) / 100;
-            $("#man").css({
-               "top" : positionMan
-            });
-            $("#garbage").css({
-               "top" : positionMan
-            });
-
              TweenMax.to("#man", 10, {left:1200});
              TweenMax.to("#trash", 3, {x:80, y:80, delay:10, opacity:0});
         });
