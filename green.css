@@ -53,13 +53,27 @@ body, html {
     left:30px;
 }
 
-.norisor {
-    width: 250px;
-    height: 100px;  
-    position: relative;
-    border-radius: 6px;
-    margin-top: 4px;
-    display: inline-block;
+.firstCloud
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:2;
+}
+.secondCloud
+{
+    position:absolute;
+    left:60px;
+    top:20px;
+    z-index:3;
+}
+
+.thirdCloud
+{
+    position:absolute;
+    left:130px;
+    top:5px;
+    z-index:4;
 }
 
 div.bin div span

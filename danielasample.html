@@ -26,7 +26,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .box {
+        .box2 {
             width: 50px;
             height: 50px;
             position: relative;
@@ -54,6 +54,29 @@
             width: 110px;
            
         }
+
+        .under
+        {
+            position:absolute;
+            left:0px;
+            top:0px;
+            z-index:-1;
+        }
+        .over
+        {
+            position:absolute;
+            left:60px;
+            top:20px;
+            z-index:-1;
+        }
+
+        .over2
+        {
+            position:absolute;
+            left:130px;
+            top:5px;
+            z-index:-1;
+        }
     </style>
 
 </head>
@@ -61,10 +84,16 @@
 <body>
     <div>
         <div>
-            <img src=".\image\norisor.png" class="box"/>
-            <img src=".\image\norisor.png" class="box"/>
-            <img src=".\image\norisor.png" class="box"/>
-            <img src=".\image\norisor.png" class="box"/>
+          <!--  <img src=".\image\norisor.png" class="box"/>
+           // <img src=".\image\norisor.png" class="box"/>
+           // <img src=".\image\norisor.png" class="box"/>
+           // <img src=".\image\norisor.png" class="box"/> -->
+            
+            <body>
+                    <img src=".\image\norisor.png" width="144" height="56" class="box under" />
+                    <img src=".\image\norisor.png" width="120" height="74" class="box over" />
+                    <img src=".\image\norisor.png" width="150" height="64" class="box over2" />
+                </body>            
         </div>
 
         <div id="demo-text" style="color: green ">Go Green with GSAP !!!! </div>
@@ -74,31 +103,7 @@
     </div>
 
     <script type="text/javascript">
-        var photo = document.getElementById("hero");
-        var photo2 = document.getElementById("hero2");
-
-        //TweenMax.to(photo, 4, { width: "100px", height: "250px" });
-        //TweenMax.to(photo2, 6, { width: "400px", height: "450px" });
-        //TweenMax.to(photo, 5, {css:{left:"400px", top:"20px"}})
-        var title = document.getElementById("demo-text");
-
-
-        TweenMax.to("#demo-text", 3, { rotationX: 45, scaleX: 0.8, z: -300, });
-        TweenMax.to(title, 3, { innerText: "TTTTTadssd" });
-
-        //TweenMax.staggerTo(".box", 1, { rotation: 360, y: 100 }, 0.5);
-//var count =0;
-        TweenMax.to(".box", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: onRepeat, repeatDelay: 0.5, ease: Linear.easeNone });
-        //TweenLite.set(box, { backgroundColor: "hsl(" + Math.random() * 255 + ", 90%, 60%)" });
-
-
-        function onRepeat() {
-            //count++;
-            //box.innerHTML = count;
-            //TweenLite.set(box, { backgroundColor: "hsl(" + Math.random() * 255 + ", 90%, 60%)" });
-        }
-
-        TweenMax.staggerFromTo(title, 0.2, { autoAlpha: 0 }, { autoAlpha: 1 }, 0.1);
+       TweenMax.to(".box", 50, { left: "700px", repeat: 10, yoyo: true, onRepeat: function(){}, repeatDelay: 0.5, ease: Linear.easeNone });
 
     </script>
 
