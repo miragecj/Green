@@ -11,12 +11,31 @@ body, html {
     height: 150px;
 }
 
-#garbage{
+#garbage1{
     position: fixed;
     bottom: 30px;
     right:100px;
-    width:100px; /*width of your image*/
-    height:100px; /*height of your image*/
+    width:80px; /*width of your image*/
+    height:80px; /*height of your image*/
+    background-image:url("image/garbage.svg");
+}
+
+#garbage2{
+    position: fixed;
+    bottom: 30px;
+    right:200px;
+    width:80px; /*width of your image*/
+    height:80px; /*height of your image*/
+    background-image:url("image/garbage.svg");
+}
+
+
+#garbage3{
+    position: fixed;
+    bottom: 30px;
+    right:300px;
+    width:80px; /*width of your image*/
+    height:80px; /*height of your image*/
     background-image:url("image/garbage.svg");
 }
 
