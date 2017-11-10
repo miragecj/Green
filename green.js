@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    ThrowAway($("#trash"), $("#garbage"));
+    ThrowAway($("#trash"), $("#garbage2"));
     
 });
 

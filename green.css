@@ -48,3 +48,9 @@ body, html {
     background-image:url("image/pet_bottle.svg");
     
 }
+
+.labelContainer{
+    position: absolute; 
+    top:70px; 
+    left:30px;
+}
