@@ -78,7 +78,7 @@ body, html {
 
 div.bin div span
 {
-    font-size: smaller; 
+    font-size: normal; 
     font-weight: bold;
 }
 
@@ -108,4 +108,94 @@ div.glass div span
 
 .glassTrash{
     background-image: url("image/pet_bottle.svg")
+}
+
+
+/* Flower area */
+
+.positiveResult
+{
+position: absolute;
+top: 200px;
+left: 50px;
+}
+
+img#flower1 
+{
+    position: absolute; 
+    top: 130px;
+    left: 0px;
+}
+img#flower2 
+{
+    position: absolute; 
+    top: 0px;
+    left: 120px;
+}
+img#flower3 
+{
+    position: absolute; 
+    top: 0px;
+    left: 320px;
+}
+img#flower4 
+{
+    position: absolute; 
+    top: 110px;
+    left: 380px;
+}
+
+
+/* End of Flower area */
+
+div.negativeResult
+{
+    height: 200px;
+    width: 130px;
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+}
+
+div.madPenguin
+{
+    background-image:url("image/Angry_Penguin.svg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div.retry
+{
+    width: 100px;
+    height: 35px;
+    background-color: #00ee99;
+    border: 1px black;
+    left: 80px;
+    bottom: 40px;
+    border-radius: 10px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20;
+    padding-left:15px;
+    padding-top:10px;
+    color: grey;
+}
+
+div.retryEnabled
+{
+    color:black;
+}
+
+div.gameDescription
+{
+    width: 300px;
+    
+    left: 700px;
+    top: 100px;
+    position: absolute;
+    font-weight: bold;
+    font-size: 20;
+    padding-left:15px;
+    padding-top:10px;
+    color:black;
 }
